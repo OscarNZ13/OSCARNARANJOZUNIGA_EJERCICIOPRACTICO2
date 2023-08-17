@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>FideFlights</title>
+
+    <link rel="stylesheet" href="../css/loginStyle.css">
+
+</head>
+
+<body>
+    <div class = "box">
+        <div class="container">
+            <div class = "top-header">
+                <header><Strong>Login</Strong></header>
+            </div>
+            <form method="POST" th:action="@{/login}">
+                <div class="input-field">
+                    <label class="input-field" for="username"><i><strong>Usuario</strong></i></label>
+                    <div class="col-md-7 my-auto">
+                        <input class="input" id="username" name="username" type="text"/></div>
+                </div>
+                <div class="form-group row my-3">
+                    <label class="col-md-5 my-auto" for="password"><i><strong>Contraseña</strong></i></label>
+                    <div class="col-md-7 my-auto"><input class="input" id="password" name="password" type="password"/></div>
+                </div>
+                <br>
+                <div class="card-footer col text-center">
+                    <button type = "Submit" class = "submit">
+                        <span class="btn"><i class="fas fa-sign-in-alt"></i>
+                            Iniciar Sesion</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

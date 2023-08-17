@@ -60,19 +60,14 @@ public class ProjectConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/admin").setViewName("admin");
-        registry.addViewController("/product").setViewName("product");
-        registry.addViewController("/registro").setViewName("registro");
-        registry.addViewController("/reportes").setViewName("reportes");
-        registry.addViewController("/carrito").setViewName("carrito");
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
-                .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**")
+                .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**", "/vuelos")
                 .permitAll()
-                .requestMatchers("/", "/index")
+                .requestMatchers("/", "/index", "/vuelos")
                 .hasRole("ADMIN"))
                 .formLogin((form) -> form.loginPage("/login")
                 .permitAll()
