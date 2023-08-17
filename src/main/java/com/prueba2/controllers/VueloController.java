@@ -2,11 +2,9 @@ package com.prueba2.controllers;
 
 import com.prueba2.entities.Vuelo;
 import com.prueba2.service.IVueloService;
-import java.util.Optional;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class VueloController {
@@ -18,11 +16,11 @@ public class VueloController {
     }
 
     @GetMapping("/vuelos")
-    public String index(Model model, @RequestParam("lowerPrice") Optional<Integer> lowerPrice, @RequestParam("higherPrice") Optional<Integer> higherPrice) {
+    public String index(Model model) {
 
         var baseProduct = new Vuelo();
-        model.addAttribute("productDefault", baseProduct);
-        model.addAttribute("products", this.productService);
+        model.addAttribute("vueloDefault", baseProduct);
+        model.addAttribute("vuelos", this.productService);
         return "vuelos";
     }
 

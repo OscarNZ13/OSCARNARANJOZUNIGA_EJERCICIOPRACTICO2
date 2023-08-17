@@ -1,0 +1,25 @@
+.Box_Vuelos {
+    background-color: #fbfaf5dc;
+    border-radius: 50px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box_Vuelos .box_each_Vuelos {
+    width: 100%;
+    overflow: hidden;
+}
+
+.Box_Vuelos table {
+    width: 100%;
+}
+
+.Box_Vuelos th,
+.Box_Vuelos td {
+    padding: 10px;
+}

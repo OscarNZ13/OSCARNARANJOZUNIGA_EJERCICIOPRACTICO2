@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FideFlights</title>
+    <link href="../css/indexStyle.css" rel="stylesheet">
+    <link href="../css/vuelosStyle.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Vuelos</h1>
+    <div th:include="Header_Template.html :: header"></div>
+    <div class=Box_Vuelos>
+        <div class="box_each_Vuelos">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Numero de vuelo</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Lugar de salida</th>
+                        <th scope="col">Hora de salida</th>
+                        <th scope="col">Fecha de salida</th>
+                        <th scope="col">Fecha de llegada</th>
+                        <th scope="col">Modelo de avion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr th:each="vuelo : ${vuelos}">
+
+                        <td><span th:text="${vuelo.numero_vuelo}"></span></td>
+                        <td><span th:text="${vuelo.destino}"></span></td>
+                        <td><span th:text="${vuelo.lugar_salida}"></span></td>
+                        <td><span th:text="${vuelo.hora_salida}"></span></td>
+                        <td><span th:text="${vuelo.fecha_salida}"></span></td>
+                        <td><span th:text="${vuelo.fecha_llegada}"></span></td>
+                        <td><span th:text="${vuelo.modelo_avion}"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>
