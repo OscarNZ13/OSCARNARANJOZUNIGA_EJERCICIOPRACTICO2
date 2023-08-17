@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+html {
+    height: 100%;
+}
+
+.TittleH1{
+    color: #F5F549;
+}
+
+.grid-container {
+    box-shadow: -1px 1px 5px 0px rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #EAFF01;
+    color: #001019;
+}
+
+.DIVnav{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.nav{
+    background-color: #3A356E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.LinkAdminMode {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.links:hover {
+    color: black;
+    background-color: #F5F549;
+}
+
+.section {
+    background-color: #fbfaf5dc;
+    border-radius: 30px;
+    height: 250px;
+    width: 500px;
+    margin: 85px auto;
+    color: #001019;
+}
+
+.ParrafoIntroductorio {
+    font-size: small;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.pendiente {
+    font-size: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white;
+}
+
+.footer {
+    background-color: #fbfaf5dc;
+    border-radius: 30px;
+    width: 200px;
+    height: 90px;
+    margin: 0 auto;
+    color: #001019;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.LinksRedes {
+    margin-top: -20px;
+    width: 30px;
+    height: 30px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "section"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 140px auto 100px;
+}
+
+#btnSearch{
+    background-color: #EAFF01;
+    color: #2E1C66;
+    text-decoration: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
